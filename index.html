@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caspian M3 Bridge</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1607083206173-174a17fb0a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1613946068526-7b742554a8a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      color: white;
     }
     header {
-      background: rgba(0,0,0,0.75);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 2rem;
       text-align: center;
     }
-    img.logo {
-      width: 100px;
-      margin-bottom: 1rem;
+    .logo {
+      width: 90px;
+      margin-bottom: 10px;
     }
     h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.4rem;
     }
-    .lang-buttons img {
-      width: 32px;
+    .lang-select img {
+      width: 34px;
       margin: 0 0.3rem;
       cursor: pointer;
       border: 2px solid transparent;
       border-radius: 50%;
     }
-    .lang-buttons img:hover {
+    .lang-select img:hover {
       border-color: #ffd700;
     }
     section {
-      background: rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.65);
       margin: 2rem auto;
       padding: 2rem;
       border-radius: 10px;
       max-width: 800px;
       text-align: center;
-    }
-    footer {
-      text-align: center;
-      background: rgba(0,0,0,0.75);
-      padding: 1rem;
-      font-size: 0.9em;
-      color: #ccc;
     }
     .contacts a {
       display: inline-block;
@@ -59,52 +52,94 @@
       text-decoration: none;
       border-radius: 5px;
     }
+    footer {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input, textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 0.7rem 1.5rem;
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Oil_industry_icon.svg/512px-Oil_industry_icon.svg.png" alt="Логотип" class="logo">
+    <h1>Caspian M3 Bridge</h1>
+    <div class="lang-select">
+      <img src="https://flagcdn.com/w40/tm.png" alt="TM" onclick="switchLang('tm')">
+      <img src="https://flagcdn.com/w40/ru.png" alt="RU" onclick="switchLang('ru')">
+      <img src="https://flagcdn.com/w40/gb.png" alt="EN" onclick="switchLang('en')">
+    </div>
+  </header>
 
-<header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Oil_industry_icon.svg/512px-Oil_industry_icon.svg.png" alt="Логотип" class="logo">
-  <h1>Caspian M3 Bridge</h1>
-  <div class="lang-buttons">
-    <img src="https://flagcdn.com/w40/tm.png" alt="TM" onclick="switchLang('tm')">
-    <img src="https://flagcdn.com/w40/ru.png" alt="RU" onclick="switchLang('ru')">
-    <img src="https://flagcdn.com/w40/gb.png" alt="EN" onclick="switchLang('en')">
-  </div>
-</header>
+  <section id="content">
+    <!-- Контент будет вставлен через JavaScript -->
+  </section>
 
-<section id="content"></section>
+  <section class="contacts">
+    <h2 id="contactTitle">Контакты</h2>
+    <a href="https://wa.me/99364731180" target="_blank">WhatsApp</a>
+    <a href="mailto:muhammedowmeylis93@gmail.com">Email</a>
+    <a href="https://t.me/share/url?url=Salam,%20siziň%20web%20saýtyňyzy%20gördüm!" target="_blank">Telegram</a>
 
-<section class="contacts">
-  <h2>Контакты</h2>
-  <a href="https://wa.me/99364731180" target="_blank">WhatsApp</a>
-  <a href="mailto:muhammedowmeylis93@gmail.com">Email</a>
-  <a href="https://t.me/share/url?url=Salam,%20siziň%20web%20saýtyňyzy%20gördüm!" target="_blank">Telegram</a>
-</section>
+    <form action="https://formspree.io/f/myzjlkjn" method="POST">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="_replyto" placeholder="Ваш email" required>
+      <textarea name="message" placeholder="Ваше сообщение..." rows="4" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
 
-<footer>
-  &copy; 2025 Caspian M3 Bridge — All rights reserved
-</footer>
+  <footer>
+    &copy; 2025 Caspian M3 Bridge — All rights reserved
+  </footer>
 
-<script>
-  const content = {
-    tm: `<p><strong>Caspian M3 Bridge</strong> — Türkmenistandan energetika we himiýa önümleri boýunça garaşsyz broker.  
-    Biz hyzmatdaşlary birleşdirmäge kömek edýäris.</p>`,
+  <script>
+    const content = {
+      tm: `<p><strong>Caspian M3 Bridge</strong> — Türkmenistandan energetika we himiýa önümleri boýunça garaşsyz broker.  
+      Biz hyzmatdaşlary birleşdirmäge kömek edýäris.</p>`,
 
-    ru: `<p><strong>Caspian M3 Bridge</strong> — независимый брокер из Туркменистана в сфере нефтепродуктов и химической продукции.  
-    Связываю поставщиков с зарубежными покупателями.</p>`,
+      ru: `<p><strong>Caspian M3 Bridge</strong> — независимый брокер из Туркменистана в сфере нефтепродуктов и химической продукции.  
+      Связываю поставщиков с зарубежными покупателями.</p>`,
 
-    en: `<p><strong>Caspian M3 Bridge</strong> is an independent broker from Turkmenistan dealing with petrochemical products.  
-    I help connect international buyers with reliable suppliers.</p>`
-  };
+      en: `<p><strong>Caspian M3 Bridge</strong> is an independent broker from Turkmenistan dealing with petrochemical products.  
+      I help connect international buyers with reliable suppliers.</p>`
+    };
 
-  function switchLang(lang) {
-    document.getElementById("content").innerHTML = content[lang];
-  }
+    function switchLang(lang) {
+      document.getElementById("content").innerHTML = content[lang];
+      document.getElementById("contactTitle").innerText = {
+        tm: "Habarlaşmak üçin",
+        ru: "Контакты",
+        en: "Contact"
+      }[lang];
+    }
 
-  // Установка языка по умолчанию
-  switchLang("ru");
-</script>
-
+    // Язык по умолчанию — русский
+    switchLang('ru');
+  </script>
 </body>
 </html>
