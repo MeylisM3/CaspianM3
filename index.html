@@ -2,159 +2,82 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Caspian M3 Bridge</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: url('https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?fit=crop&w=1920&q=80') no-repeat center center fixed;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1581093588401-bd3d4f5dcf3e?fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.6);
+      background: rgba(0,0,0,0.7);
       padding: 2rem;
       text-align: center;
+    }
+    img.logo {
+      width: 100px;
+      margin-bottom: 1rem;
     }
     h1 {
       margin: 0;
       font-size: 2em;
     }
-    h2 {
-      color: #ffd700;
+    p {
+      font-size: 1.2em;
     }
     section {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
+      background: rgba(0,0,0,0.6);
       margin: 2rem auto;
-      max-width: 800px;
+      padding: 2rem;
       border-radius: 10px;
+      max-width: 800px;
     }
     footer {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #ccc;
       text-align: center;
+      background: rgba(0,0,0,0.7);
       padding: 1rem;
-    }
-    .form input, .form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 5px;
-    }
-    .form button {
-      background: #ffd700;
-      border: none;
-      padding: 0.5rem 1rem;
-      color: black;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .form button:hover {
-      background: #e6c200;
-    }
-    .lang-switcher {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .lang-switcher button {
-      margin: 0 5px;
-      padding: 5px 10px;
-      background: #444;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .lang-switcher button:hover {
-      background: #666;
+      font-size: 0.9em;
+      color: #ccc;
     }
     .contacts a {
       display: inline-block;
-      margin-right: 10px;
-      color: #ffd700;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #ffd700;
+      color: #000;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 5px;
     }
-    img.logo {
-      width: 120px;
-      margin-bottom: 1rem;
+    .contacts a:hover {
+      background: #e6c200;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Oil_drop_icon.svg/768px-Oil_drop_icon.svg.png" alt="Logo" class="logo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Oil_industry_icon.svg/512px-Oil_industry_icon.svg.png" alt="Логотип" class="logo">
   <h1>Caspian M3 Bridge</h1>
-  <p>Международный брокер по нефтепродуктам</p>
-  <div class="lang-switcher">
-    <button onclick="changeLang('ru')">🇷🇺</button>
-    <button onclick="changeLang('tm')">🇹🇲</button>
-    <button onclick="changeLang('en')">🇬🇧</button>
-  </div>
+  <p>Независимый брокер из Туркменистана</p>
 </header>
 
-<section id="about">
-  <h2>О компании</h2>
-  <p>Я — Мейлис, независимый брокер из Туркменистана. Помогаю клиентам по всему миру получать доступ к проверенным поставщикам дизеля, мазута, бензина, удобрений и серы.</p>
-</section>
-
 <section>
-  <h2>Продукты и услуги</h2>
-  <ul>
-    <li>Diesel D2, Mazut M100, RON-92 / RON-95</li>
-    <li>LPG / LNG</li>
-    <li>Urea, Sulphur — по запросу</li>
-    <li>Помощь с ICPO, LOI, FCO, подтверждением наличия</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Как происходит сотрудничество</h2>
-  <ol>
-    <li>Вы отправляете запрос или ICPO</li>
-    <li>Я связываюсь с поставщиком и проверяю наличие</li>
-    <li>Вы получаете официальное коммерческое предложение (FCO)</li>
-    <li>Договор, оплата, отгрузка</li>
-  </ol>
+  <p>Работаю по направлениям: нефтепродукты и химическая продукция.<br> Связываю покупателей и поставщиков по запросу.</p>
 </section>
 
 <section class="contacts">
   <h2>Контакты</h2>
-  <p>Email: muhammedowmeylis93@gmail.com</p>
-  <p>WhatsApp: <a href="https://wa.me/99364731180" target="_blank">+993 64 73 11 80</a></p>
-  <p>Telegram: <a href="https://t.me/share/url?url=Здравствуйте,%20я%20нашёл%20ваш%20сайт!" target="_blank">@Связаться</a></p>
-  <form action="https://formspree.io/f/myzjlkjn" method="POST" class="form">
-    <input type="text" name="name" placeholder="Ваше имя" required>
-    <input type="email" name="email" placeholder="Ваш email" required>
-    <textarea name="message" placeholder="Сообщение" rows="5" required></textarea>
-    <button type="submit">Отправить</button>
-  </form>
+  <a href="https://wa.me/99364731180" target="_blank">WhatsApp</a>
+  <a href="mailto:muhammedowmeylis93@gmail.com">Email</a>
+  <a href="https://t.me/share/url?url=Здравствуйте,%20я%20нашёл%20ваш%20сайт!" target="_blank">Telegram</a>
 </section>
 
 <footer>
-  &copy; 2025 Caspian M3 Bridge — Независимый брокер нефтепродуктов
+  &copy; 2025 Caspian M3 Bridge — Все права защищены
 </footer>
-
-<script>
-  function changeLang(lang) {
-    const content = {
-      ru: {
-        about: "Я — Мейлис, независимый брокер из Туркменистана...",
-      },
-      tm: {
-        about: "Men — Meýlis, Türkmenistandan garaşsyz broker...",
-      },
-      en: {
-        about: "I’m Meylis, an independent broker from Turkmenistan...",
-      }
-    };
-    document.getElementById("about").querySelector("p").textContent = content[lang].about;
-  }
-</script>
 
 </body>
 </html>
